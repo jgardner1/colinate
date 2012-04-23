@@ -28,12 +28,16 @@ public class ColinateActivity extends Activity {
     }
     
     public void fillValues() {
+    	Nation nation = db.fetchNation();
     	TextView population = (TextView) findViewById(R.id.population);
-    	population.setText(String.valueOf(db.fetchNation()));
+    	population.setText(String.valueOf(nation.population));
     }
     
     public void endTurn(){
-    	db.updateNation(db.fetchNation()+100);
+    	Nation nation = db.fetchNation();
+    	nation.population += 100;
+
+    	db.update(nation);
     	fillValues();
     }
 }
