@@ -3,5 +3,7 @@
 
     <string name="hello">Hello World, ColinateActivity!</string>
     <string name="app_name">Colinate</string>
+    <string name="end_turn">End Turn</string>
+    <string name="population">Population:</string>
 
 </resources>
